@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Match Results</title>
+  <meta name="viewport" content="width=1920, initial-scale=1.0">
+
+  <!-- Preload & lock fonts -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Condensed:wght@400;700&display=swap" as="style" onload="this.rel='stylesheet'">
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+  </noscript>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="css/MatchResult.css">
+</head>
+<body>
+  <!-- Video Background Removed -->
+
+  <div class="container">
+    <!-- Header -->
+    <div class="header">
+      <h1>MATCH RESULT</h1>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="main-content">
+      <!-- Left Side -->
+      <div class="left-side">
+        <!-- First Place Block with Characters -->
+        <div class="first-place-block" id="first-place-block" style="display: none;">
+          <div class="first-place-header">
+            <div class="first-place-rank">#1</div>
+            <div class="first-place-team-info">
+              <img class="first-place-logo" id="first-logo" src="" alt="">
+              <div class="first-place-team-name" id="first-team-name">TEAM NAME</div>
+            </div>
+          </div>
+          
+          <div class="first-place-content">
+            <!-- Characters Section -->
+            <div class="characters-section">
+              <img src="assets/c1.png" class="character-img" alt="Character 1">
+              <img src="assets/c2.png" class="character-img" alt="Character 2">
+              <img src="assets/c3.png" class="character-img" alt="Character 3">
+              <img src="assets/c4.png" class="character-img" alt="Character 4">
+            </div>
+            
+            <!-- Stats Section -->
+            <div class="first-place-stats">
+              <div class="first-stat">
+                <div class="first-stat-label">WWCD</div>
+                <div class="first-stat-value" id="first-wwcd">0</div>
+              </div>
+              <div class="first-stat">
+                <div class="first-stat-label">PP</div>
+                <div class="first-stat-value" id="first-pp">0</div>
+              </div>
+              <div class="first-stat">
+                <div class="first-stat-label">FP</div>
+                <div class="first-stat-value" id="first-fp">0</div>
+              </div>
+              <div class="first-stat first-stat-total">
+                <div class="first-stat-label">TP</div>
+                <div class="first-stat-value" id="first-tp">0</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Second Place Block (Teams #2-6) -->
+        <div class="second-block">
+          <table id="table-left">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>TEAM NAME</th>
+                <th>WWCD</th>
+                <th>PP</th>
+                <th>FP</th>
+                <th>TP</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Right Side (Teams #7-16) -->
+      <div class="right-side">
+        <div class="third-block">
+          <table id="table-right">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>TEAM NAME</th>
+                <th>WWCD</th>
+                <th>PP</th>
+                <th>FP</th>
+                <th>TP</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- External Scripts -->
+  <script src="https://www.gstatic.com/charts/loader.js"></script>
+  <script src="js/MatchResult.js"></script>
+<script src="control/gs-firebase.js"></script>
+<script src="control/theme-runtime.js"></script>
+</body>
+</html>

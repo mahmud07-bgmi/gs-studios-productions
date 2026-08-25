@@ -1,0 +1,249 @@
+:root{
+  --detail-color-1: #FFFFFF;
+  --detail-color-2: #000000;
+  --detail-color-3: #FF8C00;
+  --detail-color-4: #FF6A00;
+}
+@font-face {
+  font-family: 'AgencyFB';
+  src: url('../font/AGENCYB.TTF') format('truetype');
+}
+
+@font-face {
+  font-family: 'AmericanCaptain';
+  src: url('../font/American Captain Patrius 02 FRE.otf') format('opentype');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 1920px;
+  height: 1080px;
+  overflow: hidden;
+  background: transparent;
+  font-family: 'D-DINCondensed', sans-serif;
+}
+
+.first-pick-overlay {
+  position: relative;
+  width: 1920px;
+  height: 1080px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.first-pick-overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.pick-main-bar {
+  position: absolute;
+  left: 110px;
+  top: 220px;
+  width: 1500px;
+  height: 520px;
+}
+
+/* animation */
+.pick-title-wrap,
+.name-bar,
+.character-wrap {
+  will-change: transform, opacity;
+}
+
+.first-pick-overlay.show .pick-title-wrap {
+  animation: slideFromLeft 0.55s ease-out forwards;
+}
+
+.first-pick-overlay.show .name-bar {
+  animation: slideFromLeft 0.65s ease-out forwards;
+}
+
+.first-pick-overlay.show .character-wrap {
+  animation: slideFromLeftCharacter 0.7s ease-out forwards;
+}
+
+.first-pick-overlay.hide .pick-title-wrap {
+  animation: slideOutLeft 0.4s ease-in forwards;
+}
+
+.first-pick-overlay.hide .name-bar {
+  animation: slideOutLeft 0.35s ease-in forwards;
+}
+
+.first-pick-overlay.hide .character-wrap {
+  animation: slideOutLeftCharacter 0.4s ease-in forwards;
+}
+
+@keyframes slideFromLeft {
+  0% {
+    transform: translateX(-240px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideFromLeftCharacter {
+  0% {
+    transform: translateX(-260px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOutLeft {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-180px);
+    opacity: 0;
+  }
+}
+
+@keyframes slideOutLeftCharacter {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+}
+
+/* TOP DARK BAR */
+.pick-title-wrap {
+  position: absolute;
+  left: 0;
+  top: 42px;
+
+  width: 1295px;
+  height: 232px;
+
+  background: linear-gradient(
+    90deg,
+    var(--detail-color-1) 0%,
+    var(--detail-color-1) 50%,
+    var(--detail-color-1) 100%
+  );
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  padding-right: 105px;
+
+  overflow: hidden;
+  z-index: 2;
+  opacity: 0;
+
+ border-top: 4px solid var(--detail-color-1);
+
+ box-shadow:
+  0 12px 30px rgba(255, 106, 0, 0);
+}
+
+.pick-title {
+  font-family: 'AmericanCaptain', 'D-DINCondensed', sans-serif;
+  font-size: 132px;
+  line-height: 1;
+  color: var(--detail-color-2);
+  letter-spacing: 5px;
+  text-transform: none;
+  text-shadow: 0 4px 10px rgba(0,0,0,0.32);
+}
+
+/* CHARACTER */
+.character-wrap {
+  position: absolute;
+  left: 0;
+  top: -112px;
+  width: 430px;
+  height: 470px;
+  z-index: 3;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.character-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+   filter:
+    drop-shadow(0 14px 24px rgba(0, 0, 0, 0.473))
+    drop-shadow(0 0 18px rgba(255, 106, 0, 0));
+}
+
+
+/* RED NAME BAR */
+.name-bar {
+  position: absolute;
+
+  left: 0;
+  top: 273px;
+
+  width: 1080px;
+  height: 96px;
+
+  background: linear-gradient(
+   -15deg,
+    var(--detail-color-3) 50%,
+    var(--detail-color-4) 100%
+  );
+
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    89% 100%,
+    0% 100%
+  );
+
+  display: flex;
+  align-items: center;
+
+  padding-left: 165px;
+
+  z-index: 8;
+  opacity: 0;
+
+  box-shadow:
+  0 10px 26px rgba(255,106,0,.45);
+}
+
+.player-name {
+  font-family: 'AgencyFB', Arial, sans-serif;
+  font-size: 76px; /* 🔥 thoda chhota kiya (84 → 76) */
+  line-height: 1;
+  color: var(--detail-color-1);
+  letter-spacing: 2px;
+  text-transform: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 950px; /* 🔥 bada kiya (760 → 950) */
+  text-shadow: 0 3px 8px rgba(0,0,0,0.25);
+  position: relative;
+  z-index: 9;
+}
+
+
+/* ===== INDEPENDENT TEXT COLORS ===== */
+.pick-title{color:var(--it-title)!important}.player-name{color:var(--it-player)!important}

@@ -1,0 +1,113 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg, #06101d 0%, #09182b 100%);
+  color: #ffffff;
+}
+
+.app {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 300px;
+  padding: 28px 22px;
+  background: rgba(3, 11, 22, 0.95);
+  border-right: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.brand {
+  font-size: 30px;
+  font-weight: 900;
+  margin-bottom: 30px;
+}
+
+.menu-title {
+  font-size: 22px;
+  font-weight: 800;
+  margin-bottom: 26px;
+}
+
+.status-box {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 16px;
+  line-height: 1.9;
+  font-size: 45px;
+}
+
+.main-content {
+  flex: 1;
+  padding: 28px;
+}
+
+.topbar {
+  margin-bottom: 24px;
+}
+
+.topbar h1 {
+  margin: 0;
+  font-size: 34px;
+  font-weight: 900;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(240px, 1fr));
+  gap: 22px;
+}
+
+.team-card {
+  position: relative;
+  min-height: 160px;
+  border-radius: 24px;
+  padding: 22px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  cursor: pointer;
+  transition: 0.2s ease;
+  overflow: hidden;
+}
+
+.team-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(28, 180, 255, 0.45);
+}
+
+.team-card.active {
+  border-color: #22b8ff;
+  box-shadow: 0 0 28px rgba(34, 184, 255, 0.28);
+}
+
+.slot-label {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  font-size: 45px;
+  letter-spacing: 4px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.card-logo {
+  width: 74px;
+  height: 74px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.card-name {
+  font-size: 32px;
+  font-weight: 900;
+  line-height: 1.25;
+  text-transform: uppercase;
+  word-break: break-word;
+}

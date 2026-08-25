@@ -1,0 +1,260 @@
+:root{
+  --detail-color-1: #FFFFFF;
+  --detail-color-2: #FFA726;
+  --detail-color-3: #FF6A00;
+  --detail-color-4: #FF8A00;
+}
+@font-face {
+  font-family: 'MicrogrammaD';
+  src: url('../font/Microgramma D Extended Bold.otf');
+}
+
+@font-face {
+  font-family: 'AmericanCaptain';
+  src: url('../font/American Captain Patrius 02 FRE.otf');
+}
+
+@font-face {
+  font-family: 'AgencyFB';
+  src: url('../font/AGENCYB.TTF') format('truetype');
+}
+
+:root{
+  --orange:#ff8a00;
+  --white:#ffffff;
+}
+
+body{
+  margin:0;
+  padding:0;
+  background:transparent;
+  font-family:'MicrogrammaD',sans-serif;
+}
+
+/* POSITION */
+#elim-card-container{
+  position:absolute;
+  top:20px;
+  left:50%;
+  transform:translateX(-50%);
+  z-index:999;
+}
+
+/* MAIN CARD */
+.elim-card{
+  width:560px;
+  height:130px;
+  display:flex;
+  overflow:visible;
+}
+/* LOGO SIDE */
+.logo-side{
+  width:140px;
+  background:var(--detail-color-1);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  animation:logoDrop .35s ease forwards;
+}
+
+.team-logo{
+  width:100px;
+  height:100px;
+  object-fit:contain;
+  animation:logoPop .5s ease;
+}
+
+/* INFO SIDE */
+.info-side{
+  flex:1;
+  background:linear-gradient(-15deg,var(--detail-color-2) 0%,var(--detail-color-3) 100%);
+  position:relative;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  transform-origin:left center;
+
+  opacity:0;
+  transform:scaleX(0);
+
+  animation:panelOpen .35s ease .35s forwards;
+}
+
+/* ELIMINATED */
+.eliminated-text{
+  position:absolute;
+   top:-10px;
+  left:30%;
+  transform:translateX(-50%);
+
+  background:var(--detail-color-1);
+  color:var(--detail-color-4);
+
+  padding:2px 25px;
+
+  font-family:'AgencyFB';
+  font-size:32px;
+  line-height:1;
+  z-index:10;
+animation:boxPop .25s ease .85s both;
+}
+
+/* TEAM NAME */
+.team-name{
+  font-family:'AgencyFB';
+  font-size:55px;
+  color:var(--detail-color-1);
+  text-transform:uppercase;
+  text-align:center;
+  max-width:340px;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+
+  animation:namePop .25s ease .70s both;
+}
+
+/* FINISHES */
+.team-finishes{
+  position:absolute;
+  bottom:-12px;
+  left:30%;
+  transform:translateX(-50%);
+
+  background:var(--detail-color-1);
+  color:var(--detail-color-4);
+
+  padding:2px 25px;
+
+  font-family:'AgencyFB';
+  font-size:32px;
+  line-height:1;
+  z-index:10;
+ animation:boxPop .25s ease 1s both; 
+}
+
+@keyframes logoDrop{
+  0%{
+    opacity:0;
+    transform:translateY(-80px);
+  }
+
+  70%{
+    opacity:1;
+    transform:translateY(10px);
+  }
+
+  100%{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+@keyframes panelOpen{
+  0%{
+    opacity:0;
+    transform:scaleX(0);
+  }
+
+  100%{
+    opacity:1;
+    transform:scaleX(1);
+  }
+}
+
+@keyframes panelClose{
+  from{
+    opacity:1;
+    transform:scaleX(1);
+  }
+
+  to{
+    opacity:0;
+    transform:scaleX(0);
+  }
+}
+
+@keyframes namePop{
+  from{
+    opacity:0;
+    transform:scale(.8);
+  }
+  to{
+    opacity:1;
+    transform:scale(1);
+  }
+}
+
+@keyframes boxPop{
+  from{
+    opacity:0;
+    transform:scale(.8);
+  }
+  to{
+    opacity:1;
+    transform:scale(1);
+  }
+}
+
+.exit .team-finishes{
+  animation:boxOut .20s ease forwards;
+}
+
+.exit .eliminated-text{
+  animation:boxOut .20s ease .10s forwards;
+}
+
+.exit .team-name{
+  animation:nameOut .20s ease .20s forwards;
+}
+
+.exit .info-side{
+  transform-origin:left center;
+ animation:panelClose .30s ease forwards;
+}
+
+.exit .logo-side{
+  animation:logoUp .30s ease .35s forwards;
+}
+
+@keyframes boxOut{
+  to{
+    opacity:0;
+    transform:scale(.8);
+  }
+}
+
+@keyframes nameOut{
+  to{
+    opacity:0;
+    transform:scale(.8);
+  }
+}
+
+
+@keyframes panelClose{
+  from{
+    opacity:1;
+    transform:scaleX(1);
+  }
+
+  to{
+    opacity:0;
+    transform:scaleX(0);
+  }
+}
+
+@keyframes logoUp{
+  from{
+    opacity:1;
+    transform:translateY(0);
+  }
+  to{
+    opacity:0;
+    transform:translateY(-80px);
+  }
+}
+
+/* ===== INDEPENDENT TEXT COLORS ===== */
+.eliminated-text{color:var(--it-eliminated)!important}.team-name{color:var(--it-team)!important}.team-finishes{color:var(--it-finishes)!important}

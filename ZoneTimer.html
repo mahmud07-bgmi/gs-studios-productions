@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zone Timer Overlay</title>
+  <link rel="stylesheet" href="css/ZoneTimer.css">
+</head>
+<body>
+  <div id="zone-timer-container" class="zone-timer-hidden">
+    <div id="zone-timer-rectangle" class="zone-rectangle">
+      <div id="zone-timer-fill" class="zone-fill"></div>
+      <div id="zone-timer-text" class="zone-text">
+        ZONE CLOSING IN <span id="countdown">10</span> SECONDS
+      </div>
+    </div>
+  </div>
+
+  <div id="error" style="display: none;">Error loading zone data</div>
+
+  <script src="js/ZoneTimer.js"></script>
+<script src="control/gs-firebase.js"></script>
+<script src="control/theme-runtime.js"></script>
+</body>
+</html>

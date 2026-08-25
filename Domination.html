@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=1920, initial-scale=1.0" />
+  <title>GS Team Domination Overlay</title>
+  <link rel="stylesheet" href="css/Domination.css" />
+</head>
+<body>
+  <div class="overlay-root">
+    <div id="dominationOverlay" class="domination-overlay">
+      <div class="top-panel">
+        <div class="top-glow"></div>
+        <div class="top-shine"></div>
+
+        <div class="logo-box">
+          <img id="teamLogo" class="team-logo" src="" alt="Team Logo" />
+        </div>
+
+        <div class="title-block">
+          <div class="title-line">
+            <span id="finishNumber" class="finish-number">10</span>
+            <span class="finish-text">FINISHES</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="bottom-panel">
+        <div class="bottom-shine"></div>
+        <div class="team-block">
+          <div id="teamName" class="team-name">TEAM NAME</div>
+          <div id="tagText" class="tag-text">DOMINATION</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/Domination.js"></script>
+<script src="control/gs-firebase.js"></script>
+<script src="control/theme-runtime.js"></script>
+</body>
+</html>

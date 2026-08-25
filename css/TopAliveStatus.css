@@ -1,0 +1,271 @@
+:root{
+  --detail-color-1: #FFA726;
+  --detail-color-2: #FF6A00;
+  --detail-color-3: #FFFFFF;
+  --detail-color-4: #FF8A00;
+}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap');
+
+@font-face {
+  font-family: 'Gonstet';
+  src: url('../gonstet.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'AgencyFB';
+  src: url('../font/AGENCYB.TTF') format('truetype');
+}
+
+body,
+.top-alive-status,
+.team-card,
+.team-info,
+.team-name,
+.team-finishes,
+.team-alive-section,
+.top-alive-label,
+.wwcd-percentage,
+.wwcd-label,
+.wwcd-value {
+  font-family: 'AgencyFB', sans-serif !important;
+}
+
+/* WRAPPER */
+.top-alive-status-cards-wrapper{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:40px;
+  width:100%;
+
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* animation only when class added */
+.top-alive-status-cards-wrapper.slide-down{
+  animation: slideDownIn 0.5s ease;
+}
+
+@keyframes slideDownIn{
+  from{
+    opacity:0;
+    transform:translateY(-40px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+/* CARD */
+.team-card{
+  width:370px;
+  height:100px;
+
+  position:relative;
+
+  display:flex;
+  align-items:center;
+
+   background:linear-gradient(-15deg,var(--detail-color-1) 0%,var(--detail-color-2) 100%);
+
+  overflow:visible;
+
+  border:none;
+  border-radius:0;
+
+  box-shadow:none;
+
+  flex-shrink:0;
+}
+
+/* WHITE LOGO AREA */
+.team-card::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:0;
+
+  width:105px;
+  height:100%;
+
+  background:var(--detail-color-3);
+}
+
+/* LOGO */
+.team-logo{
+  width:80px;
+  height:80px;
+
+  object-fit:contain;
+
+  margin-left:12px;
+
+  position:relative;
+  z-index:2;
+
+  background:transparent;
+  border:none;
+  border-radius:0;
+  box-shadow:none;
+}
+
+/* INFO */
+.team-info{
+  flex:1;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+
+  margin-left:10px;
+  z-index:2;
+}
+
+/* TEAM NAME */
+.team-name{
+  font-family: 'AgencyFB';
+  font-size:38px;
+  font-weight:900;
+
+  color:var(--detail-color-3);
+
+  text-transform:uppercase;
+
+  line-height:1;
+
+  text-align:center;
+
+  margin:4px 0 5px 0;
+
+  white-space:nowrap;
+}
+
+/* FINISHES */
+.team-finishes{
+  font-size:24px;
+  font-weight:100;
+font-family: 'AgencyFB';
+  color:var(--detail-color-3);
+
+  line-height:1;
+transform:translateY(-8px);
+  margin:0;
+}
+
+/* TOP ALIVE BOX */
+.team-alive-section{
+  position:absolute;
+
+  top:-12px;
+  right:65px;
+
+  background:var(--detail-color-3);
+
+  padding:3px 10px;
+
+  display:flex;
+  align-items:center;
+
+  gap:3px;
+
+  z-index:5;
+}
+
+.top-alive-label{
+  color:var(--detail-color-4);
+  font-size:20px;
+  font-weight:900;
+  font-family: 'AgencyFB';
+}
+
+/* HELMETS */
+.top-alive-rectangles{
+  display:flex;
+  gap:1px;
+}
+
+.top-alive-rect-bar{
+  width:18px;
+  height:18px;
+
+  background:url('../assets/helmet.png') center center no-repeat;
+  background-size:contain;
+}
+
+.top-alive-rect-bar.dead{
+  filter:grayscale(1);
+  opacity:.4;
+}
+
+/* WWCD BOX */
+.wwcd-percentage{
+  position:absolute;
+
+  bottom:-12px;
+  left:65%;
+
+  transform:translateX(-50%);
+
+  background:var(--detail-color-3);
+
+  padding:3px 15px;
+
+  border:none;
+  border-radius:0;
+
+  display:flex;
+  align-items:center;
+  gap:4px;
+
+  min-width:auto;
+
+  box-shadow:none;
+}
+
+.wwcd-label{
+  color:var(--detail-color-4);
+  font-size:20px;
+  font-weight:900;
+  font-family: 'AgencyFB';
+}
+
+.wwcd-value{
+  color:var(--detail-color-4);
+  font-size:20px;
+  font-weight:900;
+  font-family: 'AgencyFB';
+}
+
+/* RANK HIDE */
+.team-rank{
+  display:none;
+}
+
+/* ENTRY ANIMATION */
+.top-alive-status-cards-wrapper.slide-down{
+  animation:slideDownIn .5s ease;
+}
+
+@keyframes slideDownIn{
+  from{
+    opacity:0;
+    transform:translateY(-50px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+/* ELIMINATION */
+.team-card.eliminating{
+  opacity:0;
+  transform:translateY(-50px);
+  transition:.4s;
+}
+
+/* ===== INDEPENDENT TEXT COLORS ===== */
+.team-name{color:var(--it-team)!important}.team-finishes{color:var(--it-finishes)!important}.top-alive-label{color:var(--it-alive-label)!important}.wwcd-label{color:var(--it-wwcd-label)!important}.wwcd-value{color:var(--it-wwcd-value)!important}

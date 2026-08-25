@@ -1,0 +1,115 @@
+:root{
+  --detail-color-1: #FFFFFF;
+}
+@font-face {
+  font-family: 'AgencyB';
+  src: url('../font/AGENCYB.TTF') format('truetype');
+}
+body {
+  margin: 0;
+  width: 1920px;
+  height: 1080px;
+  overflow: hidden;
+  background: transparent;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.team-card {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1920px;
+  height: 1080px;
+}
+
+/* BACKGROUND SLOT IMAGE (PNG with design) */
+.bg-img {
+  position: absolute;
+  inset: 0;
+  width: 1920px;
+  height: 1080px;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* ========================= */
+/* 🔥 TOP LOGO (PNG ke upar direct) */
+/* ========================= */
+.top-logo {
+  position: absolute;
+
+  left: 8px;
+  top: 72px;
+
+  width: 105px;
+  height: 38px;
+
+  object-fit: contain;
+
+  z-index: 5;
+
+  /* 🔥 slight tilt (zyada nahi) */
+  transform: rotate(-15deg);
+
+  /* 🔥 clip mask (right side cut) */
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    85% 100%,
+    0% 100%
+  );
+}
+
+/* ========================= */
+/* 🔥 BOTTOM SQUARE LOGO */
+/* ========================= */
+.logo-wrap {
+  position: absolute;
+  left: 623px;
+  top: 843px;
+  width: 90px;
+  height: 90px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+.team-logo {
+  max-width: 68px;
+  max-height: 68px;
+  object-fit: contain;
+  object-position: center;
+}
+
+/* ========================= */
+/* 🔥 TEAM NAME RIBBON */
+/* ========================= */
+.team-name {
+  position: absolute;
+  left: 728px;
+  top: 839px;
+  width: 520px;
+  height: 62px;
+
+  display: flex;
+  align-items: center;
+
+  color: var(--detail-color-1);
+
+  /* 🔥 FONT CHANGE */
+  font-family: 'AgencyB', sans-serif;
+
+  font-size: 32px;
+  letter-spacing: 1.5px;
+
+  text-transform: uppercase;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+}

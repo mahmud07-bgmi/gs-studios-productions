@@ -1,0 +1,377 @@
+:root{
+  --detail-color-1: #000000;
+  --detail-color-2: #FFFFFF;
+}
+@font-face {
+  font-family: 'AgencyFB';
+  src: url('../font/AGENCYB.TTF') format('truetype');
+}
+
+@font-face {
+  font-family: 'D-DINCondensed';
+  src: url('../font/D-DINCondensed.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'AmericanCaptain';
+  src: url('../font/American Captain Patrius 02 FRE.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'MicrogrammaD';
+  src: url('../font/Microgramma D Extended Bold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'ODIN';
+  src: url('../font/ODIN.otf') format('opentype');
+}
+
+:root {
+  --bg-dark: #ffffff;
+  --bg-light: #ffffff;
+  --bg-mid: #ffffff;
+
+  --red-main: #eb3e09;
+  --red-bright: #ffffff;
+  --red-deep: #cc371d;
+
+  --white: #ffffff;
+  --text-soft: #ff5e00;
+
+  --panel-border: rgb(255, 255, 255);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 1920px;
+  height: 1080px;
+  overflow: hidden;
+  font-family: 'D-DINCondensed', 'MicrogrammaD', sans-serif;
+  position: relative;
+  background: transparent;
+}
+
+/* Main Container */
+.main-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 40px 40px 40px;
+  z-index: 5;
+  opacity: 1;
+}
+
+/* Header Section */
+.header-section {
+  text-align: center;
+  margin-bottom: 60px;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.main-title {
+  font-family: 'MicrogrammaD', sans-serif;
+  font-size: 72px;
+  font-weight: 900;
+  color: var(--red-bright);
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  text-shadow:
+    0 4px 8px rgba(0, 0, 0, 0.85),
+    0 0 14px rgba(98, 0, 255, 0.18);
+  margin-bottom: 20px;
+}
+
+.title-underline {
+  width: 400px;
+  height: 6px;
+  background: linear-gradient(90deg, transparent, var(--red-bright), transparent);
+  border-radius: 0;
+  margin: 0 auto;
+  transform: scaleX(1);
+}
+
+/* MVP Cards Container */
+.mvp-cards-container {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  max-width: 1700px;
+  width: 100%;
+  justify-content: center;
+  align-items: stretch;
+}
+
+/* MVP Card */
+.mvp-card {
+  position: relative;
+  background: linear-gradient(135deg, var(--bg-light) 0%, var(--bg-light) 100%);
+  border: 1px solid var(--panel-border);
+  border-radius: 14px;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 380px;
+  height: 750px;
+  overflow: hidden;
+  flex-shrink: 0;
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.6),
+    0 0 16px rgba(132, 0, 255, 0.14);
+  opacity: 0;
+  transform: translateY(50px) scale(0.95);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.mvp-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background: linear-gradient(90deg, transparent, var(--red-main), transparent);
+  z-index: 2;
+}
+
+/* First MVP Card */
+.mvp-card:first-child {
+  border: 1px solid rgba(255,255,255,0.18);
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.2),
+    0 0 22px rgba(0, 0, 0, 0.18);
+}
+
+/* Card Rank Badge */
+.card-rank {
+  position: absolute;
+  top: 0px;
+  right: 20px;
+  background: linear-gradient(180deg, var(--red-deep) 0%, var(--red-deep) 100%);
+  border-radius: 8px;
+  padding: 10px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(111, 0, 255, 0.3);
+  z-index: 10;
+  border: 1px solid rgba(255,255,255,0.16);
+}
+
+.rank-label {
+  font-family: 'MicrogrammaD', sans-serif;
+  font-size: 32px;
+  font-weight: 900;
+  color: var(--bg-light);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1;
+}
+
+/* Player Avatar */
+.player-avatar {
+  position: relative;
+  width: 240px;
+  height: 240px;
+  margin: 40px 0 30px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.character-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 2px solid rgba(255,255,255,0.16);
+  box-shadow:
+    0 6px 20px rgba(0, 0, 0, 0.5),
+    0 0 14px rgba(140, 0, 255, 0.12);
+}
+
+.crown-icon {
+  position: absolute;
+  top: -25px;
+  right: -20px;
+  font-size: 56px;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.6));
+  animation: crownFloat 3s ease-in-out infinite;
+}
+
+@keyframes crownFloat {
+  0%, 100% {
+    transform: translateY(0px) rotate(-8deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(8deg);
+  }
+}
+
+/* Player Info */
+.player-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.team-name {
+  font-family: 'D-DINCondensed', sans-serif;
+  font-size: 30px;
+  font-weight: 1200;
+  color: var(--detail-color-1);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0 0 20px 0;
+  text-shadow: 0 2px 4px rgba(255, 255, 255, 0.808);
+}
+
+.player-name {
+   font-family: 'AgencyFB', Arial, sans-serif;
+  font-size: 45px;
+  font-weight: 1000;
+  color: var(--detail-color-1);
+  text-transform: none;
+  letter-spacing: 0px;
+  margin: 0 0 20px 0;
+  text-shadow: 0 2px 6px rgba(255, 255, 255, 0.658);
+  line-height: 1.2;
+  word-break: break-word;
+  padding: 0 10px;
+}
+
+/* Stats Container */
+.stats-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  margin-top: auto;
+  padding-top: 20px;
+}
+
+ .stat-item {
+   background: linear-gradient(180deg, var(--red-deep) 0%, var(--red-deep) 100%);
+  border: 1px solid var(--red-bright);
+  padding: 18px;
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 10px;
+  width: 100%;
+  box-shadow: inset 0 0 10px rgba(255, 30, 0, 0.05);
+}
+
+.stat-label {
+  display: block;
+  font-family: 'D-DINCondensed', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color:var(--detail-color-2);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+
+.stat-value {
+  display: block;
+  font-family: 'MicrogrammaD', sans-serif;
+  font-size: 36px;
+  font-weight: 900;
+  color: var(--detail-color-2);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Card Glow Effect */
+.card-glow {
+  display: none;
+}
+
+/* Loading State */
+.loading {
+  color: var(--red-bright);
+  font-style: italic;
+  opacity: 0.75;
+}
+
+/* Hide card initially */
+.hide-card {
+  opacity: 0;
+  transform: translateY(50px) scale(0.9);
+}
+
+/* Responsive Design */
+@media (max-width: 1800px) {
+  .mvp-cards-container {
+    gap: 25px;
+  }
+
+  .mvp-card {
+    width: 350px;
+    height: 720px;
+  }
+
+  .main-title {
+    font-size: 64px;
+    letter-spacing: 6px;
+  }
+}
+
+@media (max-width: 1500px) {
+  .mvp-cards-container {
+    gap: 20px;
+  }
+
+  .mvp-card {
+    width: 320px;
+    height: 680px;
+    padding: 25px 15px;
+  }
+
+  .player-avatar {
+    width: 150px;
+    height: 150px;
+    margin: 30px 0 20px 0;
+  }
+
+  .player-name {
+    font-size: 28px;
+  }
+
+  .stat-value {
+    font-size: 30px;
+  }
+
+  .main-title {
+    font-size: 56px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .mvp-cards-container {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .mvp-card {
+    width: 45%;
+    min-width: 350px;
+  }
+}
+
+
+/* ===== INDEPENDENT TEXT COLORS ===== */
+.main-title{color:var(--it-title)!important}.rank-label{color:var(--it-rank-label)!important}.mvp-card .team-name{color:var(--it-team)!important}.mvp-card .player-name{color:var(--it-player)!important}.stat-label{color:var(--it-stat-label)!important}.stat-value{color:var(--it-stat-value)!important}

@@ -1,0 +1,1280 @@
+{
+  "AliveStatus": [
+    {
+      "var": "--detail-color-1",
+      "default": "#FFFFFF"
+    },
+    {
+      "var": "--detail-color-2",
+      "default": "#111827"
+    },
+    {
+      "var": "--detail-color-3",
+      "default": "#0B0715"
+    },
+    {
+      "var": "--detail-color-4",
+      "default": "#151126"
+    },
+    {
+      "var": "--detail-color-5",
+      "default": "#17213D"
+    },
+    {
+      "var": "--detail-color-6",
+      "default": "#25124A"
+    },
+    {
+      "var": "--detail-color-7",
+      "default": "#FF6A00"
+    },
+    {
+      "var": "--detail-color-8",
+      "default": "#FF8C00"
+    },
+    {
+      "var": "--detail-color-9",
+      "default": "#FFB300"
+    },
+    {
+      "var": "--detail-color-10",
+      "default": "#000000"
+    },
+    {
+      "var": "--detail-color-11",
+      "default": "#120A24"
+    },
+    {
+      "var": "--detail-color-12",
+      "default": "#220000"
+    },
+    {
+      "var": "--detail-color-13",
+      "default": "#5A0A00"
+    },
+    {
+      "var": "--detail-color-14",
+      "default": "#4C1D95"
+    },
+    {
+      "var": "--detail-color-15",
+      "default": "#6D28FF"
+    },
+    {
+      "var": "--detail-color-16",
+      "default": "#8B5CF6"
+    },
+    {
+      "var": "--detail-color-17",
+      "default": "#2A0600"
+    },
+    {
+      "var": "--detail-color-18",
+      "default": "#4A0A00"
+    },
+    {
+      "var": "--detail-color-19",
+      "default": "#6A1200"
+    },
+    {
+      "var": "--detail-color-20",
+      "default": "#351000"
+    },
+    {
+      "var": "--detail-color-21",
+      "default": "#5A1500"
+    },
+    {
+      "var": "--detail-color-22",
+      "default": "#7A1C00"
+    },
+    {
+      "var": "--detail-color-23",
+      "default": "#000000"
+    },
+    {
+      "var": "--black",
+      "default": "#220000"
+    },
+    {
+      "var": "--black-2",
+      "default": "#3A0900"
+    },
+    {
+      "var": "--purple",
+      "default": "#000000"
+    },
+    {
+      "var": "--purple-2",
+      "default": "#FF8C00"
+    },
+    {
+      "var": "--purple-3",
+      "default": "#FFB300"
+    },
+    {
+      "var": "--white",
+      "default": "#000000"
+    },
+    {
+      "var": "--cyan-white",
+      "default": "#ffffff"
+    },
+    {
+      "var": "--line",
+      "default": "rgba(255,179,0,0.25)"
+    },
+    {
+      "var": "--detail-color-24",
+      "default": "#FFD54A"
+    },
+    {
+      "var": "--detail-color-25",
+      "default": "#FF6A00"
+    },
+    {
+      "var": "--detail-color-26",
+      "default": "#FFFFFF"
+    },
+    {
+      "var": "--detail-color-27",
+      "default": "#000000"
+    },
+    {
+      "var": "--it-header-1",
+      "default": "#000000",
+      "individual": true,
+      "label": "TABLE HEADER # TEXT"
+    },
+    {
+      "var": "--it-header-2",
+      "default": "#000000",
+      "individual": true,
+      "label": "TABLE HEADER TEAM NAME TEXT"
+    },
+    {
+      "var": "--it-header-3",
+      "default": "#000000",
+      "individual": true,
+      "label": "TABLE HEADER STATUS TEXT"
+    },
+    {
+      "var": "--it-header-4",
+      "default": "#000000",
+      "individual": true,
+      "label": "TABLE HEADER FIN TEXT"
+    },
+    {
+      "var": "--it-header-5",
+      "default": "#000000",
+      "individual": true,
+      "label": "TABLE HEADER PTS TEXT"
+    },
+    {
+      "var": "--it-rank",
+      "default": "#ffffff",
+      "individual": true,
+      "label": "RANK NUMBER TEXT"
+    },
+    {
+      "var": "--it-team",
+      "default": "#000000",
+      "individual": true,
+      "label": "TEAM NAME TEXT"
+    },
+    {
+      "var": "--it-status",
+      "default": "#ffffff",
+      "individual": true,
+      "label": "ALIVE STATUS TEXT"
+    },
+    {
+      "var": "--it-fin",
+      "default": "#120A24",
+      "individual": true,
+      "label": "FIN NUMBER TEXT"
+    },
+    {
+      "var": "--it-pts",
+      "default": "#000000",
+      "individual": true,
+      "label": "PTS NUMBER TEXT"
+    },
+    {
+      "var": "--it-legend",
+      "default": "#ffffff",
+      "individual": true,
+      "label": "ALIVE / ELIMINATED LEGEND TEXT"
+    },
+    {
+      "var": "--it-elim",
+      "default": "#ffffff",
+      "individual": true,
+      "label": "ELIMINATED OVERLAY TEXT"
+    },
+    {
+      "var": "--it-error",
+      "default": "#ffffff",
+      "individual": true,
+      "label": "LOADING / ERROR TEXT"
+    }
+  ],
+  "Domination": [
+    {
+      "var": "--detail-color-1",
+      "default": "#FFFFFF"
+    },
+    {
+      "var": "--detail-color-2",
+      "default": "#000000"
+    },
+    {
+      "var": "--maroon-1",
+      "default": "#FF8C00"
+    },
+    {
+      "var": "--maroon-2",
+      "default": "#FF6A00"
+    },
+    {
+      "var": "--maroon-3",
+      "default": "#CC5500"
+    },
+    {
+      "var": "--red-1",
+      "default": "#FFA726"
+    },
+    {
+      "var": "--red-2",
+      "default": "#FF8C00"
+    },
+    {
+      "var": "--red-3",
+      "default": "#FF6A00"
+    },
+    {
+      "var": "--gold-1",
+      "default": "#FFFFFF"
+    },
+    {
+      "var": "--gold-2",
+      "default": "#E9D5FF"
+    },
+    {
+      "var": "--white",
+      "default": "#ffffff"
+    },
+    {
+      "var": "--soft-white",
+      "default": "#f2f2f2"
+    },
+    {
+      "var": "--panel-border",
+      "default": "rgba(255, 255, 255, 0)"
+    },
+    {
+      "var": "--shadow-main",
+      "default": "0 20px 45px rgba(255, 106, 0, 0)"
+    },
+    {
+      "var": "--shadow-soft",
+      "default": "0 8px 18px rgba(255, 106, 0, 0)"
+    },
+    {
+      "var": "--title-shadow",
+      "default": "0 2px 0 rgba(0,0,0,.18),\n  0 8px 18px rgba(255,106,0,.20)"
+    },
+    {
+      "var": "--text-shadow",
+      "default": "0 2px 0 rgba(0,0,0,.16),\n  0 6px 14px rgba(255,106,0,.18)"
+    },
+    {
+      "var": "--it-title",
+      "default": "#ffffff",
+      "individual": true,
+      "label": "MAIN TITLE TEXT"
+    },
+    {
+      "var": "--it-finish-number",
+      "default": "#000000",
+      "individual": true,
+      "label": "FINISH NUMBER TEXT"
+    },
+    {
+      "var": "--it-finish-text",
+      "default": "#ffffff",
+      "individual": true,
+      "label": "FINISH TEXT"
+    },
+    {
+      "var": "--it-team",
+      "default": "#f2f2f2",
+      "individual": true,
+      "label": "TEAM NAME TEXT"
+    },
+    {
+      "var": "--it-tag",
+      "default": "#f2f2f2",
+      "individual": true,
+      "label": "TAG TEXT"
+    }
+  ],
+  "ElimBroadcast": [
+    {
+      "var": "--detail-color-1",
+      "default": "#FFFFFF"
+    },
+    {
+      "var": "--detail-color-2",
+      "default": "#FFA726"
+    },
+    {
+      "var": "--detail-color-3",
+      "default": "#FF6A00"
+    },
+    {
+      "var": "--detail-color-4",
+      "default": "#FF8A00"
+    },
+    {
+      "var": "--orange",
+      "default": "#ff8a00"
+    },
+    {
+      "var": "--white",
+      "default": "#ffffff"
+    },
+    {
+      "var": "--it-eliminated",
+      "default": "#FF8A00",
+      "individual": true,
+      "label": "ELIMINATED LABEL TEXT"
+    },
+    {
+      "var": "--it-team",
+      "default": "#FFFFFF",
+      "individual": true,
+      "label": "TEAM NAME TEXT"
+    },
+    {
+      "var": "--it-finishes",
+      "default": "#FF8A00",
+      "individual": true,
+      "label": "FINISHES TEXT"
+    }
+  ],
+  "FirstPick": [
+    {
+      "var": "--detail-color-1",
+      "default": "#FFFFFF"
+    },
+    {
+      "var": "--detail-color-2",
+      "default": "#000000"
+    },
+    {
+      "var": "--detail-color-3",
+      "default": "#FF8C00"
+    },
+    {
+      "var": "--detail-color-4",
+      "default": "#FF6A00"
+    },
+    {
+      "var": "--it-title",
+      "default": "#000000",
+      "individual": true,
+      "label": "PICK TITLE TEXT"
+    },
+    {
+      "var": "--it-player",
+      "default": "#FFFFFF",
+      "individual": true,
+      "label": "PLAYER NAME TEXT"
+    }
+  ],
+  "MVP": [
+    {
+      "var": "--detail-color-1",
+      "default": "#000000"
+    },
+    {
+      "var": "--detail-color-2",
+      "default": "#FFFFFF"
+    },
+    {
+      "var": "--bg-dark",
+      "default": "#ffffff"
+    },
+    {
+      "var": "--bg-light",
+      "default": "#ffffff"
+    },
+    {
+      "var": "--bg-mid",
+      "default": "#ffffff"
+    },
+    {
+      "var": "--red-main",
+      "default": "#eb3e09"
+    },
+    {
+      "var": "--red-bright",
+      "default": "#ffffff"
+    },
+    {
+      "var": "--red-deep",
+      "default": "#cc371d"
+    },
+    {
+      "var": "--white",
+      "default": "#ffffff"
+    },
+    {
+      "var": "--text-soft",
+      "default": "#ff5e00"
+    },
+    {
+      "var": "--panel-border",
+      "default": "rgb(255, 255, 255)"
+    },
+    {
+      "var": "--it-title",
+      "default": "#ffffff",
+      "individual": true,
+      "label": "MAIN TITLE TEXT"
+    },
+    {
+      "var": "--it-rank-label",
+      "default": "#ffffff",
+      "individual": true,
+      "label": "RANK LABEL TEXT"
+    },
+    {
+      "var": "--it-team",
+      "default": "#000000",
+      "individual": true,
+      "label": "TEAM NAME TEXT"
+    },
+    {
+      "var": "--it-player",
+      "default": "#000000",
+      "individual": true,
+      "label": "PLAYER NAME TEXT"
+    },
+    {
+      "var": "--it-stat-label",
+      "default": "#ffffff",
+      "individual": true,
+      "label": "STAT LABEL TEXT"
+    },
+    {
+      "var": "--it-stat-value",
+      "default": "#ffffff",
+      "individual": true,
+      "label": "STAT VALUE TEXT"
+    }
+  ],
+  "MatchResult": [
+    {
+      "var": "--detail-color-1",
+      "default": "#FFFFFF"
+    },
+    {
+      "var": "--detail-color-2",
+      "default": "#000000"
+    },
+    {
+      "var": "--detail-color-3",
+      "default": "#FF6B27"
+    },
+    {
+      "var": "--detail-color-4",
+      "default": "#FF6427"
+    },
+    {
+      "var": "--bg-dark",
+      "default": "#ffffff"
+    },
+    {
+      "var": "--bg-light",
+      "default": "#ffffff"
+    },
+    {
+      "var": "--bg-mid",
+      "default": "#ffffff"
+    },
+    {
+      "var": "--red-main",
+      "default": "#eb3e09"
+    },
+    {
+      "var": "--red-bright",
+      "default": "#ffffff"
+    },
+    {
+      "var": "--red-deep",
+      "default": "#cc371d"
+    },
+    {
+      "var": "--white",
+      "default": "#ffffff"
+    },
+    {
+      "var": "--text-soft",
+      "default": "#ff5e00"
+    },
+    {
+      "var": "--panel-border",
+      "default": "rgba(255,255,255,0.10)"
+    },
+    {
+      "var": "--row-dark",
+      "default": "rgba(255,255,255,0.02)"
+    },
+    {
+      "var": "--row-light",
+      "default": "rgba(109,40,255,0.08)"
+    },
+    {
+      "var": "--row-hover",
+      "default": "rgba(255, 152, 92, 0.493)"
+    },
+    {
+      "var": "--it-main-title",
+      "default": "#FFFFFF",
+      "individual": true,
+      "label": "MAIN TITLE TEXT"
+    },
+    {
+      "var": "--it-first-rank",
+      "default": "#000000",
+      "individual": true,
+      "label": "FIRST PLACE RANK TEXT"
+    },
+    {
+      "var": "--it-first-team",
+      "default": "#000000",
+      "individual": true,
+      "label": "FIRST PLACE TEAM NAME TEXT"
+    },
+    {
+      "var": "--it-stat-label-wwcd",
+      "default": "#000000",
+      "individual": true,
+      "label": "FIRST WWCD LABEL TEXT"
+    },
+    {
+      "var": "--it-stat-value-wwcd",
+      "default": "#000000",
+      "individual": true,
+      "label": "FIRST WWCD VALUE TEXT"
+    },
+    {
+      "var": "--it-stat-label-pp",
+      "default": "#000000",
+      "individual": true,
+      "label": "FIRST PP LABEL TEXT"
+    },
+    {
+      "var": "--it-stat-value-pp",
+      "default": "#000000",
+      "individual": true,
+      "label": "FIRST PP VALUE TEXT"
+    },
+    {
+      "var": "--it-stat-label-fp",
+      "default": "#000000",
+      "individual": true,
+      "label": "FIRST FP LABEL TEXT"
+    },
+    {
+      "var": "--it-stat-value-fp",
+      "default": "#000000",
+      "individual": true,
+      "label": "FIRST FP VALUE TEXT"
+    },
+    {
+      "var": "--it-stat-label-tp",
+      "default": "#ffffff",
+      "individual": true,
+      "label": "FIRST TP LABEL TEXT"
+    },
+    {
+      "var": "--it-stat-value-tp",
+      "default": "#ffffff",
+      "individual": true,
+      "label": "FIRST TP VALUE TEXT"
+    },
+    {
+      "var": "--it-head-1",
+      "default": "#ffffff",
+      "individual": true,
+      "label": "TABLE # HEADER TEXT"
+    },
+    {
+      "var": "--it-head-2",
+      "default": "#ffffff",
+      "individual": true,
+      "label": "TABLE TEAM NAME HEADER TEXT"
+    },
+    {
+      "var": "--it-head-3",
+      "default": "#ffffff",
+      "individual": true,
+      "label": "TABLE WWCD HEADER TEXT"
+    },
+    {
+      "var": "--it-head-4",
+      "default": "#ffffff",
+      "individual": true,
+      "label": "TABLE PP HEADER TEXT"
+    },
+    {
+      "var": "--it-head-5",
+      "default": "#ffffff",
+      "individual": true,
+      "label": "TABLE FP HEADER TEXT"
+    },
+    {
+      "var": "--it-head-6",
+      "default": "#ffffff",
+      "individual": true,
+      "label": "TABLE TP HEADER TEXT"
+    },
+    {
+      "var": "--it-cell-rank",
+      "default": "#000000",
+      "individual": true,
+      "label": "TABLE RANK TEXT"
+    },
+    {
+      "var": "--it-cell-team",
+      "default": "#000000",
+      "individual": true,
+      "label": "TABLE TEAM NAME TEXT"
+    },
+    {
+      "var": "--it-cell-wwcd",
+      "default": "#000000",
+      "individual": true,
+      "label": "TABLE WWCD TEXT"
+    },
+    {
+      "var": "--it-cell-pp",
+      "default": "#000000",
+      "individual": true,
+      "label": "TABLE PP TEXT"
+    },
+    {
+      "var": "--it-cell-fp",
+      "default": "#000000",
+      "individual": true,
+      "label": "TABLE FP TEXT"
+    },
+    {
+      "var": "--it-cell-tp",
+      "default": "#000000",
+      "individual": true,
+      "label": "TABLE TP TEXT"
+    },
+    {
+      "var": "--it-hover",
+      "default": "#ffffff",
+      "individual": true,
+      "label": "TABLE HOVER TEXT"
+    },
+    {
+      "var": "--it-error",
+      "default": "#ffffff",
+      "individual": true,
+      "label": "ERROR TEXT"
+    }
+  ],
+  "OverallResult": [
+    {
+      "var": "--detail-color-1",
+      "default": "#FFFFFF"
+    },
+    {
+      "var": "--detail-color-2",
+      "default": "#000000"
+    },
+    {
+      "var": "--detail-color-3",
+      "default": "#FF6B27"
+    },
+    {
+      "var": "--detail-color-4",
+      "default": "#FF6427"
+    },
+    {
+      "var": "--bg-dark",
+      "default": "#ffffff"
+    },
+    {
+      "var": "--bg-light",
+      "default": "#ffffff"
+    },
+    {
+      "var": "--bg-mid",
+      "default": "#ffffff"
+    },
+    {
+      "var": "--red-main",
+      "default": "#eb3e09"
+    },
+    {
+      "var": "--red-bright",
+      "default": "#ffffff"
+    },
+    {
+      "var": "--red-deep",
+      "default": "#cc371d"
+    },
+    {
+      "var": "--white",
+      "default": "#ffffff"
+    },
+    {
+      "var": "--text-soft",
+      "default": "#ff5e00"
+    },
+    {
+      "var": "--panel-border",
+      "default": "rgba(255,255,255,0.10)"
+    },
+    {
+      "var": "--row-dark",
+      "default": "rgba(255,255,255,0.02)"
+    },
+    {
+      "var": "--row-light",
+      "default": "rgba(109,40,255,0.08)"
+    },
+    {
+      "var": "--row-hover",
+      "default": "rgba(255, 152, 92, 0.493)"
+    },
+    {
+      "var": "--it-main-title",
+      "default": "#000000",
+      "individual": true,
+      "label": "OVERALL STANDING TITLE TEXT"
+    },
+    {
+      "var": "--it-first-rank",
+      "default": "#000000",
+      "individual": true,
+      "label": "FIRST PLACE RANK TEXT"
+    },
+    {
+      "var": "--it-first-team",
+      "default": "#000000",
+      "individual": true,
+      "label": "FIRST PLACE TEAM NAME TEXT"
+    },
+    {
+      "var": "--it-stat-label-wwcd",
+      "default": "#000000",
+      "individual": true,
+      "label": "FIRST WWCD LABEL TEXT"
+    },
+    {
+      "var": "--it-stat-value-wwcd",
+      "default": "#000000",
+      "individual": true,
+      "label": "FIRST WWCD VALUE TEXT"
+    },
+    {
+      "var": "--it-stat-label-pp",
+      "default": "#000000",
+      "individual": true,
+      "label": "FIRST PP LABEL TEXT"
+    },
+    {
+      "var": "--it-stat-value-pp",
+      "default": "#000000",
+      "individual": true,
+      "label": "FIRST PP VALUE TEXT"
+    },
+    {
+      "var": "--it-stat-label-fp",
+      "default": "#000000",
+      "individual": true,
+      "label": "FIRST FP LABEL TEXT"
+    },
+    {
+      "var": "--it-stat-value-fp",
+      "default": "#000000",
+      "individual": true,
+      "label": "FIRST FP VALUE TEXT"
+    },
+    {
+      "var": "--it-stat-label-tp",
+      "default": "#ffffff",
+      "individual": true,
+      "label": "FIRST TP LABEL TEXT"
+    },
+    {
+      "var": "--it-stat-value-tp",
+      "default": "#ffffff",
+      "individual": true,
+      "label": "FIRST TP VALUE TEXT"
+    },
+    {
+      "var": "--it-head-1",
+      "default": "#ffffff",
+      "individual": true,
+      "label": "TABLE # HEADER TEXT"
+    },
+    {
+      "var": "--it-head-2",
+      "default": "#ffffff",
+      "individual": true,
+      "label": "TABLE TEAM NAME HEADER TEXT"
+    },
+    {
+      "var": "--it-head-3",
+      "default": "#ffffff",
+      "individual": true,
+      "label": "TABLE WWCD HEADER TEXT"
+    },
+    {
+      "var": "--it-head-4",
+      "default": "#ffffff",
+      "individual": true,
+      "label": "TABLE PP HEADER TEXT"
+    },
+    {
+      "var": "--it-head-5",
+      "default": "#ffffff",
+      "individual": true,
+      "label": "TABLE FP HEADER TEXT"
+    },
+    {
+      "var": "--it-head-6",
+      "default": "#ffffff",
+      "individual": true,
+      "label": "TABLE TP HEADER TEXT"
+    },
+    {
+      "var": "--it-cell-rank",
+      "default": "#000000",
+      "individual": true,
+      "label": "TABLE RANK TEXT"
+    },
+    {
+      "var": "--it-cell-team",
+      "default": "#000000",
+      "individual": true,
+      "label": "TABLE TEAM NAME TEXT"
+    },
+    {
+      "var": "--it-cell-wwcd",
+      "default": "#000000",
+      "individual": true,
+      "label": "TABLE WWCD TEXT"
+    },
+    {
+      "var": "--it-cell-pp",
+      "default": "#000000",
+      "individual": true,
+      "label": "TABLE PP TEXT"
+    },
+    {
+      "var": "--it-cell-fp",
+      "default": "#000000",
+      "individual": true,
+      "label": "TABLE FP TEXT"
+    },
+    {
+      "var": "--it-cell-tp",
+      "default": "#000000",
+      "individual": true,
+      "label": "TABLE TP TEXT"
+    },
+    {
+      "var": "--it-hover",
+      "default": "#ffffff",
+      "individual": true,
+      "label": "TABLE HOVER TEXT"
+    },
+    {
+      "var": "--it-error",
+      "default": "#ffffff",
+      "individual": true,
+      "label": "ERROR TEXT"
+    }
+  ],
+  "PrizePool": [
+    {
+      "var": "--bg-dark",
+      "default": "#8d4dfe"
+    },
+    {
+      "var": "--bg-light",
+      "default": "#7627ff"
+    },
+    {
+      "var": "--bg-mid",
+      "default": "#8d4cfc"
+    },
+    {
+      "var": "--red-main",
+      "default": "#6D28FF"
+    },
+    {
+      "var": "--red-bright",
+      "default": "#8B5CFF"
+    },
+    {
+      "var": "--red-deep",
+      "default": "#4C1DCC"
+    },
+    {
+      "var": "--white",
+      "default": "#FFFFFF"
+    },
+    {
+      "var": "--text-soft",
+      "default": "#E5E5E5"
+    },
+    {
+      "var": "--panel-border",
+      "default": "rgb(89, 0, 255)"
+    },
+    {
+      "var": "--it-title",
+      "default": "#ffffff",
+      "individual": true,
+      "label": "MAIN TITLE TEXT"
+    },
+    {
+      "var": "--it-position",
+      "default": "#E5E5E5",
+      "individual": true,
+      "label": "POSITION LABEL TEXT"
+    },
+    {
+      "var": "--it-amount",
+      "default": "#ffffff",
+      "individual": true,
+      "label": "PRIZE AMOUNT TEXT"
+    },
+    {
+      "var": "--it-reward-label",
+      "default": "#E5E5E5",
+      "individual": true,
+      "label": "REWARD LABEL TEXT"
+    },
+    {
+      "var": "--it-reward-amount",
+      "default": "#ffffff",
+      "individual": true,
+      "label": "REWARD AMOUNT TEXT"
+    }
+  ],
+  "TeamPreview": [
+    {
+      "var": "--detail-color-1",
+      "default": "#C4B5FD"
+    },
+    {
+      "var": "--bg-dark",
+      "default": "#8d4dfe"
+    },
+    {
+      "var": "--bg-light",
+      "default": "#7627ff"
+    },
+    {
+      "var": "--bg-mid",
+      "default": "#8d4cfc"
+    },
+    {
+      "var": "--red-main",
+      "default": "#6D28FF"
+    },
+    {
+      "var": "--red-bright",
+      "default": "#8B5CFF"
+    },
+    {
+      "var": "--red-deep",
+      "default": "#4C1DCC"
+    },
+    {
+      "var": "--white",
+      "default": "#6f00ff"
+    },
+    {
+      "var": "--text-soft",
+      "default": "#E5E5E5"
+    },
+    {
+      "var": "--panel-border",
+      "default": "rgba(255,255,255,0.14)"
+    },
+    {
+      "var": "--it-title",
+      "default": "#6f00ff",
+      "individual": true,
+      "label": "MAIN TITLE TEXT"
+    },
+    {
+      "var": "--it-team",
+      "default": "#ffffff",
+      "individual": true,
+      "label": "TEAM NAME TEXT"
+    },
+    {
+      "var": "--it-player",
+      "default": "#E5E5E5",
+      "individual": true,
+      "label": "PLAYER NAME TEXT"
+    },
+    {
+      "var": "--it-error",
+      "default": "#ffffff",
+      "individual": true,
+      "label": "ERROR / NODATA TEXT"
+    }
+  ],
+  "TopAliveStatus": [
+    {
+      "var": "--detail-color-1",
+      "default": "#FFA726"
+    },
+    {
+      "var": "--detail-color-2",
+      "default": "#FF6A00"
+    },
+    {
+      "var": "--detail-color-3",
+      "default": "#FFFFFF"
+    },
+    {
+      "var": "--detail-color-4",
+      "default": "#FF8A00"
+    },
+    {
+      "var": "--it-team",
+      "default": "#FFFFFF",
+      "individual": true,
+      "label": "TEAM NAME TEXT"
+    },
+    {
+      "var": "--it-finishes",
+      "default": "#FFFFFF",
+      "individual": true,
+      "label": "FINISHES TEXT"
+    },
+    {
+      "var": "--it-alive-label",
+      "default": "#FF8A00",
+      "individual": true,
+      "label": "ALIVE LABEL TEXT"
+    },
+    {
+      "var": "--it-wwcd-label",
+      "default": "#FF8A00",
+      "individual": true,
+      "label": "WWCD LABEL TEXT"
+    },
+    {
+      "var": "--it-wwcd-value",
+      "default": "#FF8A00",
+      "individual": true,
+      "label": "WWCD VALUE TEXT"
+    }
+  ],
+  "WWCD": [
+    {
+      "var": "--detail-color-1",
+      "default": "#FF5927"
+    },
+    {
+      "var": "--detail-color-2",
+      "default": "#FFA726"
+    },
+    {
+      "var": "--detail-color-3",
+      "default": "#FF6A00"
+    },
+    {
+      "var": "--detail-color-4",
+      "default": "#000000"
+    },
+    {
+      "var": "--panel-bg",
+      "default": "rgba(255,255,255,0.98)"
+    },
+    {
+      "var": "--panel-line",
+      "default": "rgba(219,92,8,0.568)"
+    },
+    {
+      "var": "--photo-glow-1",
+      "default": "rgba(36,25,10,0.95)"
+    },
+    {
+      "var": "--photo-glow-2",
+      "default": "rgba(10,5,3,0.95)"
+    },
+    {
+      "var": "--bg-dark",
+      "default": "#ffffff"
+    },
+    {
+      "var": "--bg-light",
+      "default": "#ffffff"
+    },
+    {
+      "var": "--bg-mid",
+      "default": "#ffffff"
+    },
+    {
+      "var": "--purple-main",
+      "default": "#ff6528"
+    },
+    {
+      "var": "--purple-bright",
+      "default": "#ffffff"
+    },
+    {
+      "var": "--purple-deep",
+      "default": "#FF8C00"
+    },
+    {
+      "var": "--white",
+      "default": "#ffffff"
+    },
+    {
+      "var": "--text-soft",
+      "default": "#FF6A00"
+    },
+    {
+      "var": "--panel-border",
+      "default": "rgba(255,255,255,0.10)"
+    },
+    {
+      "var": "--it-title",
+      "default": "#ffffff",
+      "individual": true,
+      "label": "MAIN TITLE TEXT"
+    },
+    {
+      "var": "--it-subtitle",
+      "default": "#ffffff",
+      "individual": true,
+      "label": "SUBTITLE TEXT"
+    },
+    {
+      "var": "--it-team",
+      "default": "#FF5927",
+      "individual": true,
+      "label": "TEAM NAME TEXT"
+    },
+    {
+      "var": "--it-finish-label",
+      "default": "#ffffff",
+      "individual": true,
+      "label": "FINISH LABEL TEXT"
+    },
+    {
+      "var": "--it-finish-value",
+      "default": "#ffffff",
+      "individual": true,
+      "label": "FINISH VALUE TEXT"
+    },
+    {
+      "var": "--it-contri-label",
+      "default": "#000000",
+      "individual": true,
+      "label": "CONTRIBUTION LABEL TEXT"
+    },
+    {
+      "var": "--it-contri-value",
+      "default": "#000000",
+      "individual": true,
+      "label": "CONTRIBUTION VALUE TEXT"
+    },
+    {
+      "var": "--it-team-stat-label",
+      "default": "#000000",
+      "individual": true,
+      "label": "TEAM STAT LABEL TEXT"
+    },
+    {
+      "var": "--it-team-stat-value",
+      "default": "#000000",
+      "individual": true,
+      "label": "TEAM STAT VALUE TEXT"
+    }
+  ],
+  "ZoneTimer": [
+    {
+      "var": "--detail-color-1",
+      "default": "#E7680D"
+    },
+    {
+      "var": "--detail-color-2",
+      "default": "#FFFFFF"
+    },
+    {
+      "var": "--detail-color-3",
+      "default": "#000000"
+    },
+    {
+      "var": "--bg-dark",
+      "default": "#ffffff"
+    },
+    {
+      "var": "--bg-light",
+      "default": "#ffffff"
+    },
+    {
+      "var": "--red-main",
+      "default": "#6D28FF"
+    },
+    {
+      "var": "--red-bright",
+      "default": "#8B5CFF"
+    },
+    {
+      "var": "--white",
+      "default": "#000000"
+    },
+    {
+      "var": "--it-zone-text",
+      "default": "#000000",
+      "individual": true,
+      "label": "ZONE TIMER TEXT"
+    },
+    {
+      "var": "--it-countdown",
+      "default": "#000000",
+      "individual": true,
+      "label": "COUNTDOWN TEXT"
+    },
+    {
+      "var": "--it-error",
+      "default": "#ffffff",
+      "individual": true,
+      "label": "ERROR TEXT"
+    },
+    {
+      "var": "--it-urgent",
+      "default": "#000000",
+      "individual": true,
+      "label": "URGENT COUNTDOWN TEXT"
+    }
+  ],
+  "bgmi-slot-overlay": [
+    {
+      "var": "--detail-color-1",
+      "default": "#FFFFFF"
+    }
+  ]
+}

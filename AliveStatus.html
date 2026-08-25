@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Alive Status Overlay</title>
+  <meta name="viewport" content="width=430, initial-scale=1">
+  <link rel="stylesheet" href="css/AliveStatus.css">
+</head>
+<body>
+  <div id="loading">Loading...</div>
+  <div id="error" style="display:none;"></div>
+  <div id="nodata" style="display:none;">No data found.</div>
+
+  <div id="table-root" style="display:none;">
+    <div class="table-container slide-in" id="table-container"></div>
+  </div>
+
+  <script src="js/AliveStatus.js"></script>
+<script src="control/gs-firebase.js"></script>
+<script src="control/theme-runtime.js"></script>
+</body>
+</html>

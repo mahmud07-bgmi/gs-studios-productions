@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Team Preview Overlay</title>
+  <meta name="viewport" content="width=1920, initial-scale=1">
+  <link rel="stylesheet" href="css/TeamPreview.css">
+</head>
+<body>
+  <!-- Background image removed -->
+  
+  <div class="overlay-content">
+    <h1 class="main-title">TEAMS PLAYING</h1>
+    
+    <div id="error" style="display:none;"></div>
+    <div id="nodata" style="display:none;">No team data found.</div>
+    
+    <div id="teams-container">
+      <div class="teams-grid" id="teams-grid"></div>
+    </div>
+  </div>
+  
+  <script src="js/TeamPreview.js"></script>
+<script src="control/gs-firebase.js"></script>
+<script src="control/theme-runtime.js"></script>
+</body>
+</html>

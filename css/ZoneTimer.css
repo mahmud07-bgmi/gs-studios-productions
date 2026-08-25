@@ -1,0 +1,241 @@
+:root{
+  --detail-color-1: #E7680D;
+  --detail-color-2: #FFFFFF;
+  --detail-color-3: #000000;
+}
+@font-face {
+  font-family: 'ODIN';
+  src: url('../font/ODIN.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MicrogrammaD';
+  src: url('../font/Microgramma D Extended Bold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'AmericanCaptain';
+  src: url('../font/American Captain Patrius 02 FRE.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'DoubleSquare';
+  src: url('../font/DoubleSquare.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --bg-dark: #ffffff;
+  --bg-light: #ffffff;
+
+  --red-main: #6D28FF;
+  --red-bright: #8B5CFF;
+
+  --white: #000000;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  overflow: hidden;
+  font-family: 'AmericanCaptain', 'MicrogrammaD', 'ODIN', 'DoubleSquare', Arial, sans-serif;
+}
+
+#zone-timer-container {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(-100%);
+  width: 600px;
+  height: 80px;
+  z-index: 1000;
+  transition: transform 0.5s ease-in-out;
+}
+
+.zone-timer-visible {
+  transform: translateX(-50%) translateY(0);
+}
+
+.zone-rectangle {
+  position: relative;
+
+  width: 100%;
+  height: 80px;
+
+  background: var(--detail-color-1);
+
+  overflow: hidden;
+
+
+  box-shadow:
+    0 8px 22px rgba(119, 0, 255, 0);
+}
+
+.zone-rectangle::before {
+  display: none;
+}
+
+.zone-fill {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 0%;
+  height: 100%;
+
+  background: var(--detail-color-2);
+
+  transition: width 0.1s linear;
+
+  z-index: 1;
+}
+.zone-text {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--detail-color-3);
+
+  font-family:
+    'AmericanCaptain',
+    'MicrogrammaD',
+    Arial,
+    sans-serif;
+
+  font-size: 24px;
+  font-weight: bold;
+
+  letter-spacing: 2px;
+
+  text-shadow:
+    0 2px 4px rgba(0,0,0,.8);
+
+  z-index: 2;
+}
+
+#countdown {
+  font-size: 28px;
+  color: var(--white);
+ 
+  margin: 0 8px;
+}
+
+/* Slide down animation */
+@keyframes slideDown {
+  from {
+    transform: translateX(-50%) translateY(-100%);
+  }
+  to {
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+/* Slide up animation */
+@keyframes slideUp {
+  from {
+    transform: translateX(-50%) translateY(0);
+  }
+  to {
+    transform: translateX(-50%) translateY(-100%);
+  }
+}
+
+/* Fill animation from right to left (initial phase) */
+@keyframes fillRightToLeft {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Fill animation from left to right (countdown phase) */
+@keyframes fillLeftToRight {
+  from {
+    width: 100%;
+    right: 0;
+    left: auto;
+  }
+  to {
+    width: 0%;
+    right: 0;
+    left: auto;
+  }
+}
+
+.zone-slide-down {
+  animation: slideDown 0.5s ease-out forwards;
+}
+
+.zone-slide-up {
+  animation: slideUp 0.5s ease-in forwards;
+}
+
+.zone-fill-initial {
+  animation: fillRightToLeft 0.5s ease-out forwards;
+}
+
+.zone-fill-countdown {
+  right: 0;
+  left: auto;
+  width: 100%;
+}
+
+/* Error styles */
+#error {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--white);
+  font-family: 'MicrogrammaD', 'AmericanCaptain', 'ODIN', Arial, sans-serif;
+  font-size: 18px;
+  text-align: center;
+  background: rgba(12, 6, 28, 0.92);
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.14);
+ box-shadow: 0 0 18px rgba(109, 40, 255, 0.18);
+}
+
+/* Pulsing effect for active countdown */
+.countdown-active {
+  animation: pulse 1s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    text-shadow:
+      0 2px 4px rgba(0, 0, 0, 0.8),
+      0 0 6px rgba(109, 40, 255, 0.18);
+  }
+
+  50% {
+    text-shadow:
+      0 2px 8px rgba(255, 255, 255, 0.35),
+      0 0 14px rgba(109, 40, 255, 0.4),
+      0 2px 4px rgba(0, 0, 0, 0.8);
+  }
+}
+.countdown-urgent {
+  color: var(--white) !important;
+  animation: pulse 1s ease-in-out infinite;
+}
+
+
+/* ===== INDEPENDENT TEXT COLORS ===== */
+.zone-text{color:var(--it-zone-text)!important}#countdown{color:var(--it-countdown)!important}.countdown-urgent{color:var(--it-urgent)!important}#error{color:var(--it-error)!important}
