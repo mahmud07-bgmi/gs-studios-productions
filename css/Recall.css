@@ -2,6 +2,7 @@
   font-family: AgencyFB;
   src: url('../font/AGENCYB.TTF') format('truetype');
   font-weight: 700;
+  font-style: normal;
 }
 
 :root {
@@ -12,22 +13,30 @@
   --recall-border: transparent;
 }
 
-* { box-sizing: border-box; }
-html, body {
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
   width: 100%;
   height: 100%;
   margin: 0;
   overflow: hidden;
   background: transparent;
 }
-body { background: transparent; }
+
+body {
+  background: transparent;
+  font-family: AgencyFB, sans-serif;
+}
 
 .recall-overlay {
   position: fixed;
   left: 6.0%;
   top: 50%;
-  width: min(1050px, 68vw);
-  height: min(285px, 18.5vw);
+  width: min(1050px, 68.4vw);
+  height: min(285px, 18.55vw);
   min-width: 760px;
   min-height: 205px;
   transform: translate(-120%, -50%);
@@ -42,6 +51,7 @@ body { background: transparent; }
   height: 100%;
 }
 
+/* WHITE TEAM PANEL */
 .main-panel {
   position: absolute;
   left: 0;
@@ -49,41 +59,45 @@ body { background: transparent; }
   width: 100%;
   height: 72%;
   background: var(--recall-panel);
+  border: 0 solid var(--recall-border);
   display: flex;
   align-items: center;
   overflow: hidden;
-  border: 0 solid var(--recall-border);
 }
 
+/* TEAM LOGO */
 .logo-box {
-  width: 21%;
+  width: 24.5%;
   height: 100%;
+  flex: 0 0 24.5%;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex: 0 0 21%;
 }
 
 .team-logo {
-  width: 78%;
+  width: 68%;
   height: 78%;
   object-fit: contain;
   display: block;
 }
 
+/* TEAM NAME — AGENCY FB */
 .team-name {
   color: var(--recall-team-text);
-  font-family: AgencyFB, sans-serif;
-  font-size: clamp(46px, 5.0vw, 78px);
-  line-height: .9;
+  font-family: AgencyFB, sans-serif !important;
+  font-size: clamp(46px, 5vw, 78px);
+  font-weight: 700;
+  line-height: .88;
   letter-spacing: 1px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: 75%;
+  max-width: 72%;
   padding-top: 4px;
 }
 
+/* PURPLE RECALL STRIP */
 .recall-label {
   position: absolute;
   left: 0;
@@ -94,10 +108,10 @@ body { background: transparent; }
   color: var(--recall-text);
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 0 3%;
-  font-family: AgencyFB, sans-serif;
-  font-size: clamp(34px, 3.6vw, 58px);
+  justify-content: flex-start;
+  padding: 0 3% 0 14%;
+  font-family: AgencyFB, sans-serif !important;
+  font-size: clamp(38px, 3.7vw, 58px);
   font-weight: 700;
   line-height: 1;
   letter-spacing: .8px;
@@ -105,8 +119,11 @@ body { background: transparent; }
   clip-path: polygon(0 0, 100% 0, 92% 100%, 0 100%);
 }
 
-#recallCount { margin-left: 10px; }
+#recallCount {
+  margin-left: 10px;
+}
 
+/* SLIDE IN */
 .recall-overlay.show {
   visibility: visible;
   opacity: 1;
@@ -114,6 +131,7 @@ body { background: transparent; }
   animation: recallIn .48s cubic-bezier(.16, 1, .3, 1) both;
 }
 
+/* SLIDE OUT */
 .recall-overlay.hide {
   visibility: visible;
   opacity: 0;
@@ -121,11 +139,23 @@ body { background: transparent; }
 }
 
 @keyframes recallIn {
-  from { transform: translate(-120%, -50%); opacity: 0; }
-  to   { transform: translate(0, -50%); opacity: 1; }
+  from {
+    transform: translate(-120%, -50%);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0, -50%);
+    opacity: 1;
+  }
 }
 
 @keyframes recallOut {
-  from { transform: translate(0, -50%); opacity: 1; }
-  to   { transform: translate(-120%, -50%); opacity: 0; }
+  from {
+    transform: translate(0, -50%);
+    opacity: 1;
+  }
+  to {
+    transform: translate(-120%, -50%);
+    opacity: 0;
+  }
 }
