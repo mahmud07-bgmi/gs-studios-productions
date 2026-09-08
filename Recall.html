@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1920, initial-scale=1.0">
+  <title>Players Recall Overlay</title>
+  <link rel="stylesheet" href="css/Recall.css">
+</head>
+<body>
+  <div id="recallOverlay" class="recall-overlay" aria-hidden="true">
+    <div class="recall-card">
+      <div class="main-panel">
+        <div class="logo-box">
+          <img id="teamLogo" class="team-logo" src="" alt="Team Logo">
+        </div>
+        <div id="teamName" class="team-name">TEAM NAME</div>
+      </div>
+      <div class="recall-label">
+        <span>PLAYERS RECALLED </span><span id="recallCount">1</span>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/Recall.js"></script>
+  <script src="control/gs-firebase.js"></script>
+  <script src="control/theme-runtime.js"></script>
+</body>
+</html>
