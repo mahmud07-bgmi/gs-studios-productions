@@ -1276,5 +1276,27 @@
       "var": "--detail-color-1",
       "default": "#FFFFFF"
     }
+  ],
+  "Recall": [
+    {
+      "var": "--recall-panel",
+      "default": "#FFFFFF"
+    },
+    {
+      "var": "--recall-team-text",
+      "default": "#050505"
+    },
+    {
+      "var": "--recall-strip",
+      "default": "#8A00FF"
+    },
+    {
+      "var": "--recall-text",
+      "default": "#FFFFFF"
+    },
+    {
+      "var": "--recall-border",
+      "default": "#FFFFFF"
+    }
   ]
 }
