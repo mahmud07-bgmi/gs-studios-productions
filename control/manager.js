@@ -1,6 +1,6 @@
 const q = new URLSearchParams(location.search);
 const overlay = q.get('overlay');
-const names = { AliveStatus: 'Alive Status', ElimBroadcast: 'Elimination Broadcast', TopAliveStatus: 'Top Alive Status', TeamPreview: 'Team Preview', ZoneTimer: 'Zone Timer', FirstPick: 'First Pick', MatchResult: 'Match Result', OverallResult: 'Overall Result', WWCD: 'WWCD Team Stats', PrizePool: 'Prize Pool', MVP: 'MVP', Domination: 'Team Domination' };
+const names = { AliveStatus: 'Alive Status', ElimBroadcast: 'Elimination Broadcast', TopAliveStatus: 'Top Alive Status', TeamPreview: 'Team Preview', ZoneTimer: 'Zone Timer', FirstPick: 'First Pick', MatchResult: 'Match Result', OverallResult: 'Overall Result', WWCD: 'WWCD Team Stats', PrizePool: 'Prize Pool', MVP: 'MVP', Domination: 'Team Domination', Recall: 'Players Recall' };
 const key = 'gs-overlay-' + overlay;
 let defaults = [], state = {}, history = [];
 
@@ -54,6 +54,21 @@ const overlayControlSchemas = {
   Domination: {
     labels: { '--detail-color-1': 'MAIN PANEL BACKGROUND / FINISH TEXT', '--detail-color-2': 'DOMINATION SCORE TEXT', '--maroon-1': 'LEGACY ACCENT – LIGHT', '--maroon-2': 'LEGACY ACCENT – CENTER', '--maroon-3': 'LEGACY ACCENT – DARK', '--red-1': 'BOTTOM STRIP – TOP', '--red-2': 'BOTTOM STRIP – CENTER', '--red-3': 'BOTTOM STRIP – BOTTOM', '--gold-1': 'DECORATION HIGHLIGHT', '--gold-2': 'DECORATION SOFT HIGHLIGHT', '--white': 'MAIN TITLE TEXT', '--soft-white': 'TEAM NAME TEXT', '--panel-border': 'PANEL BORDER', '--shadow-main': 'MAIN PANEL SHADOW', '--shadow-soft': 'SOFT SHADOW', '--title-shadow': 'TITLE TEXT SHADOW', '--text-shadow': 'TEAM / FINISH TEXT SHADOW' },
     sections: [['panel', 'MAIN PANEL', ['--detail-color-1', '--detail-color-2', '--panel-border']], ['strip', 'BOTTOM STRIP', ['--red-1', '--red-2', '--red-3']], ['text', 'TEXT', ['--white', '--soft-white']], ['accent', 'DECORATION ACCENTS', ['--maroon-1', '--maroon-2', '--maroon-3', '--gold-1', '--gold-2']], ['shadow', 'SHADOWS', ['--shadow-main', '--shadow-soft', '--title-shadow', '--text-shadow']]], open: ['panel', 'strip']
+  },
+
+  Recall: {
+    labels: {
+      '--recall-panel': 'MAIN PANEL BACKGROUND',
+      '--recall-team-text': 'TEAM NAME TEXT',
+      '--recall-strip': 'RECALL STRIP COLOR',
+      '--recall-text': 'RECALL TEXT',
+      '--recall-border': 'PANEL BORDER'
+    },
+    sections: [
+      ['panel', 'MAIN PANEL', ['--recall-panel', '--recall-team-text', '--recall-border']],
+      ['strip', 'RECALL STRIP', ['--recall-strip', '--recall-text']]
+    ],
+    open: ['panel', 'strip']
   },
   MVP: {
     labels: { '--detail-color-1': 'TEAM & PLAYER NAME TEXT', '--detail-color-2': 'STAT LABEL & VALUE TEXT', '--bg-dark': 'SECONDARY CARD BACKGROUND', '--bg-light': 'MVP CARD BACKGROUND / RANK LABEL', '--bg-mid': 'CENTER BACKGROUND TONE', '--red-main': 'CARD TOP ACCENT', '--red-bright': 'MAIN TITLE / BRIGHT ACCENT', '--red-deep': 'RANK BADGE & STAT BOX BACKGROUND', '--white': 'GENERAL LABEL / VALUE TEXT', '--text-soft': 'SMALL SOFT TEXT', '--panel-border': 'CARD BORDER' },
@@ -247,7 +262,7 @@ function cloudQuery() { const s = window.GSFirebase ? window.GSFirebase.getRawCo
 async function save() {
   localStorage.setItem(key, JSON.stringify(state)); applyPreview();
   const c = cfg();
-  if (c && c.databaseURL && window.GSFirebase) {
+  if (c && window.GSFirebase && window.GSFirebase.hasRealtimeDatabaseConfig(c)) {
     try {
       await window.GSFirebase.saveOverlay(overlay, state, c);
       alert('Theme saved + cloud live apply done (room: ' + room() + ')');
