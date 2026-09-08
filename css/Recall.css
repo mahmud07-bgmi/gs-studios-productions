@@ -4,12 +4,6 @@
   font-weight: 700;
 }
 
-@font-face {
-  font-family: DDINCondensed;
-  src: url('../font/D-DINCondensed.otf') format('opentype');
-  font-weight: 700;
-}
-
 :root {
   --recall-panel: #ffffff;
   --recall-team-text: #050505;
@@ -79,7 +73,7 @@ body { background: transparent; }
 
 .team-name {
   color: var(--recall-team-text);
-  font-family: AgencyFB, Impact, sans-serif;
+  font-family: AgencyFB, sans-serif;
   font-size: clamp(46px, 5.0vw, 78px);
   line-height: .9;
   letter-spacing: 1px;
@@ -102,7 +96,7 @@ body { background: transparent; }
   align-items: center;
   justify-content: center;
   padding: 0 3%;
-  font-family: DDINCondensed, AgencyFB, sans-serif;
+  font-family: AgencyFB, sans-serif;
   font-size: clamp(34px, 3.6vw, 58px);
   font-weight: 700;
   line-height: 1;
