@@ -1,5 +1,5 @@
 const SHEET_ID = "1gyzPFtG3ubxzrqGEtQI-dr4aiExDU6Fx0tzFS2W4iG8";
-const SHEET_NAME = "alive_status"; // apne sheet tab ka exact name rakho
+const SHEET_NAME = "alive_status";
 const REFRESH_MS = 1200;
 const TRIGGER_FINISHES = 10;
 const AUTO_HIDE_MS = 4200;
@@ -34,17 +34,33 @@ function parseGViz(text) {
 
   return json.table.rows.map(row => {
     const obj = {};
+
     row.c.forEach((cell, i) => {
       obj[cols[i]] = cell ? cell.v : "";
     });
+
     return obj;
   });
 }
 
+/*
+  TIER RULES:
+  10–14  = DOMINATION
+  15–19  = RAMPAGE
+  20+    = UNSTOPPABLE
+*/
 function getTag(finishes) {
-  if (finishes >= 20) return "GODLIKE";
+  if (finishes >= 20) return "UNSTOPPABLE";
   if (finishes >= 15) return "RAMPAGE";
-  return "DOMINATION";
+  if (finishes >= 10) return "DOMINATION";
+  return "";
+}
+
+function getTier(finishes) {
+  if (finishes >= 20) return "unstoppable";
+  if (finishes >= 15) return "rampage";
+  if (finishes >= 10) return "domination";
+  return null;
 }
 
 function showOverlay(data) {
@@ -62,16 +78,21 @@ function showOverlay(data) {
 
   overlay.classList.remove("hide");
   overlay.classList.remove("show");
+
+  // Restart animation cleanly
   void overlay.offsetWidth;
+
   overlay.classList.add("show");
 
   clearTimeout(hideTimer);
+
   hideTimer = setTimeout(() => {
     overlay.classList.remove("show");
     overlay.classList.add("hide");
 
     setTimeout(() => {
       isShowing = false;
+
       if (queue.length > 0) {
         const next = queue.shift();
         showOverlay(next);
@@ -81,7 +102,10 @@ function showOverlay(data) {
 }
 
 function enqueuePopup(data) {
-  const alreadyQueued = queue.some(item => item.unique_key === data.unique_key);
+  const alreadyQueued = queue.some(
+    item => item.unique_key === data.unique_key
+  );
+
   if (alreadyQueued) return;
 
   if (isShowing) {
@@ -107,29 +131,57 @@ async function fetchSheet() {
 
       if (!fullName && !shortName) return;
 
-      const teamKey = shortName || fullName || `row_${index}`;
+      const teamKey =
+        shortName || fullName || `row_${index}`;
+
       currentScores[teamKey] = finishes;
 
       const previous = previousScores[teamKey] ?? 0;
 
-      // trigger only when crossing 10+
-      if (previous < TRIGGER_FINISHES && finishes >= TRIGGER_FINISHES) {
-        const uniqueKey = `${teamKey}_${TRIGGER_FINISHES}`;
+      /*
+        Only trigger when entering a NEW tier.
 
-        if (!shownKeys.has(uniqueKey)) {
-          shownKeys.add(uniqueKey);
+        DOMINATION:
+        First time team reaches 10–14.
+        It will NOT trigger again at 11, 12, 13 or 14.
 
-          enqueuePopup({
-            unique_key: uniqueKey,
-            team_display_name: fullName,
-            team_logo: logo,
-            finish_points: finishes
-          });
-        }
-      }
+        RAMPAGE:
+        First time team reaches 15–19.
+        It will NOT trigger again at 16, 17, 18 or 19.
+
+        UNSTOPPABLE:
+        First time team reaches 20+.
+        It will NOT trigger again at 21, 22, 23 etc.
+      */
+
+      const currentTier = getTier(finishes);
+      const previousTier = getTier(previous);
+
+      if (!currentTier) return;
+
+      // Only trigger when the team moves into a new tier.
+      if (currentTier === previousTier) return;
+
+      /*
+        Unique key contains the team + tier.
+        Therefore each tier can only be shown once.
+      */
+      const uniqueKey = `${teamKey}_${currentTier}`;
+
+      if (shownKeys.has(uniqueKey)) return;
+
+      shownKeys.add(uniqueKey);
+
+      enqueuePopup({
+        unique_key: uniqueKey,
+        team_display_name: fullName,
+        team_logo: logo,
+        finish_points: finishes
+      });
     });
 
     previousScores = currentScores;
+
   } catch (error) {
     console.error("Sheet fetch error:", error);
   }
