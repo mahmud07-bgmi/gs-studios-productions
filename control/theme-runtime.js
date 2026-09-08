@@ -16,7 +16,8 @@ OverallResult:'OverallResult',
 WWCD:'WWCD',
 PrizePool:'PrizePool',
 MVP:'MVP',
-Domination:'Domination'
+Domination:'Domination',
+Recall:'Recall'
 };
 
 const overlay = MAP[PAGE];
