@@ -26,6 +26,20 @@
   --detail-color-25: #ffffff;
   --detail-color-26: #FFFFFF;
   --detail-color-27: #ffffff;
+  /* Independent text-color controls used by the Admin Manager. */
+  --it-header-1: #000000;
+  --it-header-2: #000000;
+  --it-header-3: #000000;
+  --it-header-4: #000000;
+  --it-header-5: #000000;
+  --it-rank: #ffffff;
+  --it-team: #000000;
+  --it-status: #ffffff;
+  --it-fin: #120A24;
+  --it-pts: #000000;
+  --it-legend: #ffffff;
+  --it-elim: #ffffff;
+  --it-error: #ffffff;
 }
 html,
 body {
@@ -849,4 +863,4 @@ color: var(--detail-color-10);
 
 /* ===== INDEPENDENT TEXT COLORS (added without removing original controls) ===== */
 .table-alive thead th:nth-child(1){color:var(--it-header-1)!important}.table-alive thead th:nth-child(2){color:var(--it-header-2)!important}.table-alive thead th:nth-child(3){color:var(--it-header-3)!important}.table-alive thead th:nth-child(4){color:var(--it-header-4)!important}.table-alive thead th:nth-child(5){color:var(--it-header-5)!important}
-.table-alive tbody td:first-child{color:var(--it-rank)!important}.table-alive tbody td.team{color:var(--it-team)!important}.table-alive tbody td:nth-child(3){color:var(--it-status)!important}.table-alive tbody td:nth-child(4){color:var(--it-fin)!important}.table-alive tbody td:nth-child(5){color:var(--it-pts)!important}.alive-legend{color:var(--it-legend)!important}.elim-row-overlay-text{color:var(--it-elim)!important}#loading,#error,#nodata{color:var(--it-error)!important}
+.table-alive tbody td:first-child{color:var(--it-rank)!important}.table-alive tbody td.team,.table-alive tbody td.team span{color:var(--it-team)!important}.table-alive tbody td:nth-child(3){color:var(--it-status)!important}.table-alive tbody td:nth-child(4){color:var(--it-fin)!important}.table-alive tbody td:nth-child(5){color:var(--it-pts)!important}.alive-legend{color:var(--it-legend)!important}.elim-row-overlay-text{color:var(--it-elim)!important}#loading,#error,#nodata{color:var(--it-error)!important}
