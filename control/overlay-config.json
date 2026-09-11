@@ -1017,6 +1017,12 @@
       "default": "rgba(255,255,255,0.14)"
     },
     {
+      "var": "--it-logo-bg",
+      "default": "#17004B",
+      "individual": false,
+      "label": "LOGO BACKGROUND"
+    },
+    {
       "var": "--it-title",
       "default": "#6f00ff",
       "individual": true,
