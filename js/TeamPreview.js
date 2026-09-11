@@ -137,7 +137,7 @@ document.addEventListener('DOMContentLoaded', function() {
   fetchTeamData();
   
   // Refresh data every 30 seconds (less frequent than AliveStatus since team data changes less often)
-  setInterval(fetchTeamData, 1000);
+  setInterval(fetchTeamData, 300000);
 });
 
 // Handle video loading
